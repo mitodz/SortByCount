@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Main {
 
     public static int[] sortByCount (int[]a, int m) {
-        int[]b = new int[m];
+        int[]b = new int[m + 1];
         for (int i = 0; i < a.length; i++) {
             b[a[i]]++;
         }
-        for (int j = 1; j < m; j++) {
+        for (int j = 1; j < m + 1; j++) {
             b[j] = b[j] + b[j - 1];
         }
         int [] res = new int[a.length];
